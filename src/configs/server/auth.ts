@@ -1,15 +1,11 @@
-import { PrismaAdapter } from "@auth/prisma-adapter";
-import {
-  getServerSession,
-  type DefaultSession,
-  type NextAuthOptions,
-} from "next-auth";
-import { type Adapter } from "next-auth/adapters";
-import { env } from "@/configs/env";
-import { db } from "@/configs/server/db";
-import { URL } from "@/configs/constants/url";
+import { PrismaAdapter } from '@auth/prisma-adapter';
+import { getServerSession, type DefaultSession, type NextAuthOptions } from 'next-auth';
+import { type Adapter } from 'next-auth/adapters';
+import { env } from '@/configs/env';
+import { db } from '@/configs/server/db';
+import { URL } from '@/configs/constants/url';
 
-import BattleNetProvider from "next-auth/providers/battlenet";
+import BattleNetProvider from 'next-auth/providers/battlenet';
 
 /**
  * Module augmentation for `next-auth` types. Allows us to add custom properties to the `session`
@@ -17,17 +13,17 @@ import BattleNetProvider from "next-auth/providers/battlenet";
  *
  * @see https://next-auth.js.org/getting-started/typescript#module-augmentation
  */
-declare module "next-auth" {
+declare module 'next-auth' {
   interface Session extends DefaultSession {
     user: {
       id: string;
-      role: User["role"];
+      role: User['role'];
       accessToken?: string;
-    } & DefaultSession["user"];
+    } & DefaultSession['user'];
   }
 
   interface User {
-    role: "USER" | "ADMIN";
+    role: 'USER' | 'ADMIN';
   }
 }
 
@@ -48,7 +44,7 @@ export const authOptions: NextAuthOptions = {
 
     async redirect({ url, baseUrl }) {
       if (url.startsWith(URL.HOME)) return baseUrl + url;
-      return baseUrl + URL.DASHBOARD;
+      return baseUrl + URL.HOME;
     },
   },
   adapter: PrismaAdapter(db) as Adapter,
@@ -56,7 +52,7 @@ export const authOptions: NextAuthOptions = {
     BattleNetProvider({
       clientId: env.BATTLENET_CLIENT_ID,
       clientSecret: env.BATTLENET_CLIENT_SECRET,
-      issuer: "https://eu.battle.net/oauth",
+      issuer: 'https://eu.battle.net/oauth',
     }),
     /**
      * ...add more providers here.
