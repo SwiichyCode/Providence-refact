@@ -2,9 +2,9 @@ import { HeaderLogo } from '@/app/providence/_components/header-logo';
 import { HeaderNavigation } from '@/app/providence/_components/header-navigation';
 import { HeaderAuthentication } from '@/app/providence/_components/header-authentication';
 
-export const Header = () => {
+export const Header = async () => {
   return (
-    <header className={'flex w-screen py-8 px-12 border-b border-[#21242F]'}>
+    <header className={'flex w-screen py-8 px-12 border-b border-[#21242F] text-[#F2EFE5]'}>
       <HeaderLogo />
       <HeaderNavigation />
       <HeaderAuthentication />

@@ -10,7 +10,7 @@ const navigationItems = [
 
 export const HeaderNavigation = () => {
   return (
-    <nav className={'w-full flex justify-center text-[#79767B]'}>
+    <nav className={'w-full flex justify-center'}>
       <ul className={'flex gap-8 text-xl pt-2'}>
         {navigationItems.map(({ name, href }) => (
           <li key={name}>
