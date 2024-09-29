@@ -1,4 +1,6 @@
 export const URL = {
-    HOME: "/",
-    DASHBOARD: "/dashboard",
+  HOME: '/providence',
+  ROSTER: '/providence/roster',
+  RECRUTEMENT: '/providence/recrutement',
+  DASHBOARD: '/providence/dashboard',
 };

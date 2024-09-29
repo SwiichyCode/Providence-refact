@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from 'react';
-import { Header } from '@/app/dashboard/_components/header';
+import { Header } from '@/app/providence/_components/header';
 
 export default function DashboardLayout({ children }: PropsWithChildren) {
   return (
