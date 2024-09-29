@@ -4,7 +4,7 @@ import { HeaderAuthentication } from '@/app/providence/_components/header-authen
 
 export const Header = async () => {
   return (
-    <header className={'flex w-screen py-8 px-12 border-b border-[#21242F] text-[#F2EFE5]'}>
+    <header className={'flex w-full py-8 px-12 border-b border-[#21242F]'}>
       <HeaderLogo />
       <HeaderNavigation />
       <HeaderAuthentication />

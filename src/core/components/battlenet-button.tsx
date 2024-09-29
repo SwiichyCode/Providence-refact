@@ -10,8 +10,6 @@ type Props = {
 };
 
 export const BattlenetButton = ({ session }: Props) => {
-  console.log(session);
-
   return !session ? (
     <Button className={'bg-[#0581B2]'} onClick={async () => await signIn('battlenet', { callbackUrl: URL.HOME })}>
       Connect with Battle.net

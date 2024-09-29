@@ -1,7 +1,12 @@
+import { Fragment } from 'react';
+import { HeroSection } from '@/app/providence/_components/hero-section';
+import { FeaturesSection } from '@/app/providence/_components/features-section';
+
 export default function ProvidencePage() {
   return (
-    <div>
-      <h1>Providence</h1>
-    </div>
+    <Fragment>
+      <HeroSection />
+      <FeaturesSection />
+    </Fragment>
   );
 }
