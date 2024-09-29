@@ -3,9 +3,9 @@ import { URL } from '@/configs/constants/url';
 
 const navigationItems = [
   { name: 'Presentation', href: URL.HOME },
-  { name: 'Roster', href: URL.ROSTER },
+  /*{ name: 'Roster', href: URL.ROSTER },
   { name: 'Postuler', href: URL.RECRUTEMENT },
-  { name: 'Dashboard', href: URL.DASHBOARD },
+  { name: 'Dashboard', href: URL.DASHBOARD },*/
 ];
 
 export const HeaderNavigation = () => {
