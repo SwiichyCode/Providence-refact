@@ -11,15 +11,11 @@ type Props = {
 
 export const BattlenetButton = ({ session }: Props) => {
   return !session ? (
-    <Button className={'bg-[#0581B2]'} onClick={async () => await signIn('battlenet', { callbackUrl: URL.HOME })}>
-      Connect with Battle.net
-    </Button>
+    <Button onClick={async () => await signIn('battlenet', { callbackUrl: URL.HOME })}>Connect with Battle.net</Button>
   ) : (
     <div className={'flex items-center gap-4'}>
       <p>{session.user.name}</p>
-      <Button className={'text-red-500'} onClick={async () => await signOut()}>
-        Logout
-      </Button>
+      <Button onClick={async () => await signOut()}>Logout</Button>
     </div>
   );
 };

@@ -49,8 +49,50 @@ model User {
   email         String?   @unique
   emailVerified DateTime?
   image         String?
+  role          Role      @default(USER)
   accounts      Account[]
   sessions      Session[]
+}
+
+model Member {
+  id               String   @id @default(cuid())
+  pseudo           String
+  class            String
+  specialization   String?
+  role             String
+  appreciation     String?
+  deposit          Boolean?
+  roster           Boolean?
+  rosterSubscribed Boolean?
+}
+
+model Recruitment {
+  id             String @id @default(cuid())
+  pseudo         String
+  battleTag      String
+  discord        String
+  class          String
+  ilvl           String
+  specialization String
+  faction        String
+  raiderIo       String
+  warcraftLogs   String
+  presentation   String
+  motivation     String
+}
+
+model RosterMember {
+  id    Int    @id
+  name  String
+  realm String
+  class String
+  spec  String
+  ilvl  String
+}
+
+model NeededClass {
+  id    String   @id @default(cuid())
+  class String[]
 }
 
 model VerificationToken {
@@ -59,4 +101,9 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+enum Role {
+  USER
+  ADMIN
 }
