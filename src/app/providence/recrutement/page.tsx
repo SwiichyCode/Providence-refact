@@ -57,7 +57,7 @@ export default function RecrutementPage() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="pt-32 max-w-[1080px] m-auto">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="py-20 sm:py-28 mx-auto max-w-7xl px-6 lg:px-8">
         <div>
           <h1 className="text-4xl font-bold pb-12">Nous rejoindre</h1>
           <div className="space-y-12 text-lg">
