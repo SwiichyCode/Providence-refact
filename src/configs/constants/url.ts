@@ -4,4 +4,12 @@ export const URL = {
   RECRUTEMENT: '/providence/recrutement',
   RECRUTEMENT_CONFIRMATION: '/providence/recrutement/confirmation',
   DASHBOARD: '/providence/dashboard',
+  LOGIN: '/providence/login',
 };
+
+export const navigation = [
+  { name: 'Presentation', href: URL.HOME },
+  /*{ name: 'Roster', href: URL.ROSTER },*/
+  { name: 'Postuler', href: URL.RECRUTEMENT },
+  /*{ name: 'Dashboard', href: URL.DASHBOARD },*/
+];

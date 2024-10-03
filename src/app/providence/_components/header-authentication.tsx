@@ -5,8 +5,8 @@ export const HeaderAuthentication = async () => {
   const session = await getServerAuthSession();
 
   return (
-    <div className={'flex items-center justify-center flex-1 ml-auto'}>
+    <nav>
       <BattlenetButton session={session} />
-    </div>
+    </nav>
   );
 };
