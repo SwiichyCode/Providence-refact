@@ -4,7 +4,7 @@ import React from 'react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import { useHeaderMobileStore } from '@/app/providence/_stores/header-mobile-store';
 
-const HeaderHamburger = () => {
+export const HeaderHamburger = () => {
   const { toggle } = useHeaderMobileStore();
 
   return (
@@ -18,5 +18,3 @@ const HeaderHamburger = () => {
     </button>
   );
 };
-
-export default HeaderHamburger;

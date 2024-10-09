@@ -3,12 +3,12 @@ import { navigation } from '@/configs/constants/url';
 
 export const HeaderNavigation = () => {
   return (
-    <nav className="w-full flex justify-center">
-      <ul className="flex gap-8 text-xl pt-2">
+    <nav>
+      <ul className="flex items-center gap-8">
         {navigation.map(({ name, href }) => (
           <li key={name}>
             <ActiveLink href={href}>
-              <a className="hover:text-[#0581B2]">{name}</a>
+              <a className="hover:text-[#0581B2] text-lg">{name}</a>
             </ActiveLink>
           </li>
         ))}

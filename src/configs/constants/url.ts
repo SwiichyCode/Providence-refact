@@ -5,6 +5,7 @@ export const URL = {
   RECRUTEMENT_CONFIRMATION: '/providence/recrutement/confirmation',
   DASHBOARD: '/providence/dashboard',
   LOGIN: '/providence/login',
+  PROFILE: '/providence/profile',
 };
 
 export const navigation = [

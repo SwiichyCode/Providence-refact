@@ -53,6 +53,12 @@ export const authOptions: NextAuthOptions = {
       clientId: env.BATTLENET_CLIENT_ID,
       clientSecret: env.BATTLENET_CLIENT_SECRET,
       issuer: 'https://eu.battle.net/oauth',
+      region: 'eu',
+      authorization: {
+        params: {
+          scope: 'openid wow.profile',
+        },
+      },
     }),
     /**
      * ...add more providers here.
