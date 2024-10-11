@@ -13,7 +13,7 @@ export default async function DashboardLayout({ children }: PropsWithChildren) {
   return (
     <div className="flex mx-auto max-w-7xl p-6 lg:px-8 space-x-4">
       <Aside />
-      <div className="pl-36 min-h-[calc(100vh-317px)]">{children}</div>
+      <div className="pl-36 min-h-[calc(100vh-317px)] min-w-full">{children}</div>
     </div>
   );
 }

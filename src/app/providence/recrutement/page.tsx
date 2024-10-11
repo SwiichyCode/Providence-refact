@@ -9,7 +9,7 @@ import { formSchema } from '@/app/providence/recrutement/_components/recruitment
 import { SelectForm } from '@/core/components/ui/select-form';
 import { TextAreaForm } from '@/core/components/ui/textarea-form';
 import { ButtonSubmit } from '@/core/components/ui/button-submit';
-import { postRecruitmentAction } from '@/app/providence/recrutement/_actions/post-recruitment';
+import { postRecruitmentAction } from '@/app/providence/_actions/post-recruitment';
 import { CLASS } from '@/configs/constants/roster';
 import type * as z from 'zod';
 

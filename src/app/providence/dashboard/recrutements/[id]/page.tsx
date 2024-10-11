@@ -1,5 +1,7 @@
 import { db } from '@/configs/server/db';
 import Link from 'next/link';
+import { CloseRecruitmentForm } from '@/app/providence/dashboard/_components/close-recruitment-form';
+import { ArchivedRecruitmentForm } from '@/app/providence/dashboard/_components/archived-recruitment-form';
 
 type Props = {
   params: {
@@ -20,6 +22,12 @@ export default async function RecruitmentInformationsPage({ params }: Props) {
 
   return (
     <section className="space-y-8">
+      <div className="flex flex-col md:items-center space-y-4 md:flex-row md:space-y-0 md:space-x-4">
+        <CloseRecruitmentForm recruitmentId={recruitment.id} />
+        <ArchivedRecruitmentForm recruitmentId={recruitment.id} />
+        <p>Status: {recruitment.status}</p>
+      </div>
+
       <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-8">
         <p>Pseudo: {recruitment.pseudo}</p>
         <p>BattleTag: {recruitment.battleTag}</p>

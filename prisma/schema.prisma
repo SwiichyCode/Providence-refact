@@ -67,7 +67,7 @@ model Member {
 }
 
 model Recruitment {
-  id             String   @id @default(cuid())
+  id             String           @id @default(cuid())
   pseudo         String
   battleTag      String
   discord        String
@@ -79,8 +79,14 @@ model Recruitment {
   warcraftLogs   String
   presentation   String
   motivation     String
-  availability   String   @default("Tous les soirs")
-  date           DateTime @default(now())
+  availability   String           @default("Tous les soirs")
+  status         RecruitingStatus @default(OPEN)
+  date           DateTime         @default(now())
+}
+
+model RecruitmentPriority {
+  id                  String @id @default(cuid())
+  recruitmentPriority String
 }
 
 model RosterMember {
@@ -108,4 +114,10 @@ model VerificationToken {
 enum Role {
   USER
   ADMIN
+}
+
+enum RecruitingStatus {
+  OPEN
+  CLOSED
+  ARCHIVED
 }

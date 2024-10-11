@@ -19,7 +19,9 @@ export default async function RecrutementsPage() {
           <Link href={`recrutements/${recruitment.id}`} key={recruitment.id}>
             <Card>
               <CardHeader>
-                <CardTitle>{recruitment.pseudo}</CardTitle>
+                <CardTitle>
+                  {recruitment.pseudo} - ({recruitment.status})
+                </CardTitle>
                 <CardDescription>
                   {recruitment.class} / {recruitment.discord}
                 </CardDescription>

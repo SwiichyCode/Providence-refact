@@ -4,6 +4,7 @@ export const URL = {
   RECRUTEMENT: '/providence/recrutement',
   RECRUTEMENTS: '/providence/dashboard/recrutements',
   RECRUTEMENT_CONFIRMATION: '/providence/recrutement/confirmation',
+  PARAMS: '/providence/dashboard/parametres ',
   DASHBOARD: '/providence/dashboard',
   LOGIN: '/providence/login',
   PROFILE: '/providence/profile',
@@ -18,4 +19,5 @@ export const navigation = [
 export const dashboardNavigation = [
   { name: 'Dashboard', href: URL.DASHBOARD },
   { name: 'Recrutements', href: URL.RECRUTEMENTS },
+  { name: 'Paramètres', href: URL.PARAMS },
 ];
