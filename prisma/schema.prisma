@@ -67,7 +67,7 @@ model Member {
 }
 
 model Recruitment {
-  id             String @id @default(cuid())
+  id             String   @id @default(cuid())
   pseudo         String
   battleTag      String
   discord        String
@@ -79,6 +79,7 @@ model Recruitment {
   warcraftLogs   String
   presentation   String
   motivation     String
+  date           DateTime @default(now())
 }
 
 model RosterMember {

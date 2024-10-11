@@ -9,7 +9,7 @@ interface Props {
 
 export default function RecrutementConfirmationPage({ searchParams }: Props) {
   return (
-    <div className="flex flex-col items-center justify-center h-full">
+    <div className="flex flex-col items-center justify-center h-[calc(100vh-225px)] md:h-[calc(100vh-317px)]">
       <div className="flex flex-col items-center justify-center w-full max-w-lg p-4 space-y-4">
         <h1 className="text-3xl font-bold text-center">Merci pour votre candidature {searchParams.pseudo}</h1>
         <p className="mt-4 text-center">

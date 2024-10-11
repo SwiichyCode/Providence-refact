@@ -81,7 +81,7 @@ export default function RecrutementPage() {
         </div>
 
         <div className="mt-24 space-y-8">
-          <div className={'flex space-x-8'}>
+          <div className="flex space-x-8">
             <InputForm control={form.control} name="pseudo" label="Pseudo" />
 
             <InputForm control={form.control} name="battleTag" label="BattleTag" />
