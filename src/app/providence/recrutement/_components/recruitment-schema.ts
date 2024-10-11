@@ -14,4 +14,5 @@ export const formSchema = z.object({
   warcraftLogs: z.string().url(),
   presentation: z.string().min(1),
   motivation: z.string().min(1),
+  availability: z.string().min(1),
 });

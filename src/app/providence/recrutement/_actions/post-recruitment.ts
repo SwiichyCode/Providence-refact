@@ -22,6 +22,7 @@ export const postRecruitmentAction = actionClient.schema(formSchema).action(asyn
         warcraftLogs: parsedInput.warcraftLogs,
         presentation: parsedInput.presentation,
         motivation: parsedInput.motivation,
+        availability: parsedInput.availability,
         date: new Date(),
       },
     });

@@ -33,6 +33,7 @@ export default function RecrutementPage() {
       warcraftLogs: '',
       presentation: '',
       motivation: '',
+      availability: '',
     },
   });
 
@@ -124,6 +125,7 @@ export default function RecrutementPage() {
           <div className={'flex w-full flex-col space-y-8'}>
             <TextAreaForm control={form.control} name="presentation" label="Présentez-vous" />
             <TextAreaForm control={form.control} name="motivation" label="Pourquoi nous rejoindre ?" />
+            <TextAreaForm control={form.control} name="availability" label="Disponibilités (Lundi/Mardi ect..)" />
           </div>
 
           {errorMessage && <p className="text-red-500">{errorMessage}</p>}

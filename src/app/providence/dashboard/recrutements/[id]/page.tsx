@@ -48,6 +48,7 @@ export default async function RecruitmentInformationsPage({ params }: Props) {
       <div className="space-y-8">
         <p>Presentation: {recruitment.presentation}</p>
         <p>Motivation: {recruitment.motivation}</p>
+        <p>Disponibilités: {recruitment.availability}</p>
       </div>
     </section>
   );
