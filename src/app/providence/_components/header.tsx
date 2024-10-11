@@ -4,15 +4,9 @@ import { HeaderLogo } from '@/app/providence/_components/header-logo';
 import { HeaderMobile } from '@/app/providence/_components/header-mobile';
 import { HeaderAuthentication } from '@/app/providence/_components/header-authentication';
 import { HeaderHamburger } from '@/app/providence/_components/header-hamburger';
-
 import { HeaderNavigation } from '@/app/providence/_components/header-navigation';
-import { getServerAuthSession } from '@/configs/server/auth';
 
 export const Header = async () => {
-  const session = await getServerAuthSession();
-
-  console.log('session', session);
-
   return (
     <header>
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
