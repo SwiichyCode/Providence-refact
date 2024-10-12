@@ -42,7 +42,7 @@ export const RecruitmentPriorityForm = ({ recruitmentPriority }: Props) => {
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-4">
         <FormDescription className="text-white">Définir la priorité de recrutement</FormDescription>
         <TextAreaForm control={form.control} name={'recruitmentPriority'} />
-        <ButtonSubmit isPending={isPending}>Confirmer</ButtonSubmit>
+        <ButtonSubmit isPending={isPending}>{recruitmentPriority ? 'Editer' : 'Ajouter'}</ButtonSubmit>
       </form>
     </Form>
   );
