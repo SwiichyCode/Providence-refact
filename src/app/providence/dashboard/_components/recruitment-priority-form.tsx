@@ -6,28 +6,33 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Form, FormDescription } from '@/core/components/ui/form';
 import { TextAreaForm } from '@/core/components/ui/textarea-form';
 import { ButtonSubmit } from '@/core/components/ui/button-submit';
-import * as z from 'zod';
 import { updateRecruitmentPriorityAction } from '@/app/providence/_actions/update-recruitment-priority';
+import type { RecruitmentPriority } from '@prisma/client';
+import * as z from 'zod';
 
 const formSchema = z.object({
-  recruitmentPriority: z.string(),
+  recruitmentPriority: z.string().optional(),
 });
 
-export const RecruitmentPriorityForm = () => {
+type Props = {
+  recruitmentPriority: RecruitmentPriority | null;
+};
+
+export const RecruitmentPriorityForm = ({ recruitmentPriority }: Props) => {
   const [isPending, startTransition] = useTransition();
 
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      recruitmentPriority: '',
+      recruitmentPriority: recruitmentPriority?.recruitmentPriority,
     },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     startTransition(async () => {
       await updateRecruitmentPriorityAction({
-        recruitmentPriorityId: '1',
-        recruitmentPriority: values.recruitmentPriority,
+        recruitmentPriorityId: recruitmentPriority?.id,
+        recruitmentPriority: values.recruitmentPriority ?? '',
       });
     });
   }
