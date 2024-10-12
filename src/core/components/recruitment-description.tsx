@@ -18,7 +18,8 @@ export const RecruitmentDescription = ({ recruitmentPriority }: Props) => {
         </p>
 
         <div>
-          <p>Recrutement prioritaire: {recruitmentPriority}</p>
+          <p>Recrutement prioritaire</p>
+          <p>Roster 1: {recruitmentPriority}</p>
         </div>
       </div>
     </div>
