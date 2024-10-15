@@ -13,11 +13,11 @@ import {
   FormLabel,
   FormMessage,
 } from '@/core/components/ui/form';
-import { formSchema } from '@/app/providence/recrutement/_components/recruitment-schema';
+import { formSchema } from '@/core/forms/recruitment-schema';
 import { SelectForm } from '@/core/components/ui/select-form';
 import { TextAreaForm } from '@/core/components/ui/textarea-form';
 import { ButtonSubmit } from '@/core/components/ui/button-submit';
-import { postRecruitmentAction } from '@/app/providence/_actions/post-recruitment';
+import { postRecruitmentAction } from '@/core/actions/post-recruitment';
 import { Checkbox } from '@/core/components/ui/checkbox';
 import { CLASS } from '@/configs/constants/roster';
 import type * as z from 'zod';

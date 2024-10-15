@@ -6,7 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Form, FormDescription } from '@/core/components/ui/form';
 import { TextAreaForm } from '@/core/components/ui/textarea-form';
 import { ButtonSubmit } from '@/core/components/ui/button-submit';
-import { updateRecruitmentPriorityAction } from '@/app/providence/_actions/update-recruitment-priority';
+import { updateRecruitmentPriorityAction } from '@/core/actions/update-recruitment-priority';
 import type { RecruitmentPriority } from '@prisma/client';
 import * as z from 'zod';
 

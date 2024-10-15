@@ -56,7 +56,7 @@ export default async function RecruitmentInformationsPage({ params }: Props) {
       <div className="space-y-8">
         <p>Presentation: {recruitment.presentation}</p>
         <p>Motivation: {recruitment.motivation}</p>
-        <p>Disponibilités: {recruitment.days}</p>
+        <p>Disponibilités: {recruitment.days.map((day) => day).join(', ')}</p>
       </div>
     </section>
   );

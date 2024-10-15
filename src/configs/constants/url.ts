@@ -8,6 +8,7 @@ export const URL = {
   DASHBOARD: '/providence/dashboard',
   LOGIN: '/providence/login',
   PROFILE: '/providence/profile',
+  WARCRAFTLOGS: '/providence/dashboard/warcraftlogs',
 };
 
 export const navigation = [
@@ -20,4 +21,5 @@ export const dashboardNavigation = [
   { name: 'Dashboard', href: URL.DASHBOARD },
   { name: 'Recrutements', href: URL.RECRUTEMENTS },
   { name: 'Paramètres', href: URL.PARAMS },
+  { name: 'Warcraftlogs', href: URL.WARCRAFTLOGS },
 ];

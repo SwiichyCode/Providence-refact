@@ -5,7 +5,7 @@ import { db } from '@/configs/server/db';
 import { ACTION_ERROR } from '@/configs/constants/error';
 import { redirect } from 'next/navigation';
 import { URL } from '@/configs/constants/url';
-import { formSchema } from '@/app/providence/recrutement/_components/recruitment-schema';
+import { formSchema } from '@/core/forms/recruitment-schema';
 
 export const postRecruitmentAction = actionClient.schema(formSchema).action(async ({ parsedInput }) => {
   try {

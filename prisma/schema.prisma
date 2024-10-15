@@ -103,6 +103,12 @@ model NeededClass {
   class String[]
 }
 
+model WarcraftLog {
+  id   String   @id @default(cuid())
+  url  String
+  date DateTime @default(now())
+}
+
 model VerificationToken {
   identifier String
   token      String   @unique

@@ -2,7 +2,7 @@
 
 import React, { useTransition } from 'react';
 import { ButtonSubmit } from '@/core/components/ui/button-submit';
-import { updateRecruitmentAction } from '@/app/providence/_actions/update-recruitment';
+import { updateRecruitmentAction } from '@/core/actions/update-recruitment';
 
 type Props = {
   recruitmentId: string;
