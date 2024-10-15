@@ -16,6 +16,8 @@ export const HeroSection = () => {
         respectueux pour évoluer ensemble dans les contenus héroïques et mythiques.
       </p>
 
+      <p>Nos soirées de raid se déroulent les mercredi, dimanche et lundi de 21h à minuit.</p>
+
       <div className="w-full justify-center">
         <Button>
           <Link href={URL.RECRUTEMENT}>Rejoins-nous !</Link>
