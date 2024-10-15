@@ -7,6 +7,9 @@ export const revalidate = 60;
 
 export default async function RecrutementsPage() {
   const recruitments = await db.recruitment.findMany({
+    where: {
+      status: 'OPEN',
+    },
     orderBy: {
       date: 'desc',
     },
