@@ -23,3 +23,9 @@ export const dashboardNavigation = [
   { name: 'Paramètres', href: URL.PARAMS },
   { name: 'Warcraftlogs', href: URL.WARCRAFTLOGS },
 ];
+
+export const recruitmentNavigation = [
+  { name: 'Recrutements ouverts', href: `${URL.RECRUTEMENTS}` },
+  { name: 'Recrutements fermés', href: `${URL.RECRUTEMENTS}/closed` },
+  { name: 'Recrutements archivés', href: `${URL.RECRUTEMENTS}/archived` },
+];

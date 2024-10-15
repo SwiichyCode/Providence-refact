@@ -1,14 +1,12 @@
 import { Fragment } from 'react';
-import { db } from '@/configs/server/db';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/core/components/ui/card';
+import { db } from '@/configs/server/db';
 
-export const revalidate = 60;
-
-export default async function RecruitmentsPage() {
+export default async function RecruitmentsClosedPage() {
   const recruitments = await db.recruitment.findMany({
     where: {
-      status: 'OPEN',
+      status: 'CLOSED',
     },
     orderBy: {
       date: 'desc',
