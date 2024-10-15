@@ -79,7 +79,7 @@ model Recruitment {
   warcraftLogs   String
   presentation   String
   motivation     String
-  availability   String           @default("Tous les soirs")
+  days           String[]
   status         RecruitingStatus @default(OPEN)
   date           DateTime         @default(now())
 }

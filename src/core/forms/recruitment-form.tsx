@@ -4,16 +4,56 @@ import { useState, useTransition, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { InputForm } from '@/core/components/ui/input-form';
-import { Form } from '@/core/components/ui/form';
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/core/components/ui/form';
 import { formSchema } from '@/app/providence/recrutement/_components/recruitment-schema';
 import { SelectForm } from '@/core/components/ui/select-form';
 import { TextAreaForm } from '@/core/components/ui/textarea-form';
 import { ButtonSubmit } from '@/core/components/ui/button-submit';
 import { postRecruitmentAction } from '@/app/providence/_actions/post-recruitment';
+import { Checkbox } from '@/core/components/ui/checkbox';
 import { CLASS } from '@/configs/constants/roster';
 import type * as z from 'zod';
 
 export type FormValues = z.infer<typeof formSchema>;
+
+export const days = [
+  {
+    id: 'lundi',
+    label: 'Lundi',
+  },
+  {
+    id: 'mardi',
+    label: 'Mardi',
+  },
+  {
+    id: 'mercredi',
+    label: 'Mercredi',
+  },
+  {
+    id: 'jeudi',
+    label: 'Jeudi',
+  },
+  {
+    id: 'vendredi',
+    label: 'Vendredi',
+  },
+  {
+    id: 'samedi',
+    label: 'Samedi',
+  },
+  {
+    id: 'dimanche',
+    label: 'Dimanche',
+  },
+] as const;
 
 export default function RecruitmentForm() {
   const [isPending, startTransition] = useTransition();
@@ -33,7 +73,7 @@ export default function RecruitmentForm() {
       warcraftLogs: '',
       presentation: '',
       motivation: '',
-      availability: '',
+      days: [],
     },
   });
 
@@ -100,10 +140,52 @@ export default function RecruitmentForm() {
             <InputForm control={form.control} name="raiderIo" label="Lien Raider.io" />
             <InputForm control={form.control} name="warcraftLogs" label="Lien Warcraft Logs" />
           </div>
-          <div className={'flex w-full flex-col space-y-8'}>
+          <div className="flex w-full flex-col space-y-8">
             <TextAreaForm control={form.control} name="presentation" label="Présentez-vous" />
             <TextAreaForm control={form.control} name="motivation" label="Pourquoi nous rejoindre ?" />
-            <TextAreaForm control={form.control} name="availability" label="Disponibilités (Lundi/Mardi ect..)" />
+            {/*<TextAreaForm control={form.control} name="availability" label="Disponibilités (Lundi/Mardi ect..)" />*/}
+
+            <FormField
+              control={form.control}
+              name="days"
+              render={() => (
+                <FormItem>
+                  <div className="mb-4">
+                    <FormLabel className="text-base">Disponibilités</FormLabel>
+                    <FormDescription>
+                      Veuillez sélectionner les jours où vous êtes disponible pour raider.
+                    </FormDescription>
+                  </div>
+                  {days.map((item) => (
+                    <FormField
+                      key={item.id}
+                      control={form.control}
+                      name="days"
+                      render={({ field }) => {
+                        return (
+                          <FormItem key={item.id} className="flex flex-row items-start space-x-3 space-y-0">
+                            <FormControl>
+                              <Checkbox
+                                checked={Array.isArray(field.value) && field.value.includes(item.id)}
+                                onCheckedChange={(checked) => {
+                                  if (Array.isArray(field.value)) {
+                                    return checked
+                                      ? field.onChange([...field.value, item.id])
+                                      : field.onChange(field.value.filter((value) => value !== item.id));
+                                  }
+                                }}
+                              />
+                            </FormControl>
+                            <FormLabel className="font-normal">{item.label}</FormLabel>
+                          </FormItem>
+                        );
+                      }}
+                    />
+                  ))}
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
           </div>
 
           {errorMessage && <p className="text-red-500">{errorMessage}</p>}

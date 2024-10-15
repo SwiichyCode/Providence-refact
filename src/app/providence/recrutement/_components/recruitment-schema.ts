@@ -14,5 +14,9 @@ export const formSchema = z.object({
   warcraftLogs: z.string().url(),
   presentation: z.string().min(1),
   motivation: z.string().min(1),
-  availability: z.string().min(1),
+  /*availability: z.string().min(1),*/
+
+  days: z.array(z.string()).refine((value) => value.some((item) => item), {
+    message: 'You have to select at least one item.',
+  }),
 });
