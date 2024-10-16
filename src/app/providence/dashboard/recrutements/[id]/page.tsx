@@ -42,13 +42,13 @@ export default async function RecruitmentInformationsPage({ params }: Props) {
       <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-8">
         <p>
           Raider.io:{' '}
-          <Link href={recruitment.raiderIo} className="text-[#0581B2]">
+          <Link href={recruitment.raiderIo} className="text-[#0581B2]" target="_blank">
             {recruitment.raiderIo}
           </Link>
         </p>
         <p>
           Warcraft Logs:{' '}
-          <Link href={recruitment.warcraftLogs} className="text-[#0581B2]">
+          <Link href={recruitment.warcraftLogs} className="text-[#0581B2]" target="_blank">
             {recruitment.warcraftLogs}
           </Link>
         </p>
