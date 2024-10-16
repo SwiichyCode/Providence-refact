@@ -28,4 +28,5 @@ export const recruitmentNavigation = [
   { name: 'Recrutements ouverts', href: `${URL.RECRUTEMENTS}` },
   { name: 'Recrutements fermés', href: `${URL.RECRUTEMENTS}/closed` },
   { name: 'Recrutements archivés', href: `${URL.RECRUTEMENTS}/archived` },
+  { name: 'Recrutements refusés', href: `${URL.RECRUTEMENTS}/denied` },
 ];

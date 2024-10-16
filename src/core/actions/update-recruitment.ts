@@ -7,7 +7,7 @@ import * as z from 'zod';
 
 const actionSchema = z.object({
   recruitmentId: z.string(),
-  recruitmentStatus: z.enum(['OPEN', 'CLOSED', 'ARCHIVED']),
+  recruitmentStatus: z.enum(['OPEN', 'CLOSED', 'DENIED', 'ARCHIVED']),
 });
 
 export const updateRecruitmentAction = adminAction.schema(actionSchema).action(async ({ parsedInput }) => {
