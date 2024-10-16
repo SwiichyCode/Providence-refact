@@ -17,7 +17,7 @@ export default async function RecruitmentsClosedPage() {
     <Fragment>
       <ul role="list" className="w-auto grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {recruitments.map((recruitment) => (
-          <Link href={`recrutements/${recruitment.id}`} key={recruitment.id}>
+          <Link href={recruitment.id} key={recruitment.id}>
             <Card>
               <CardHeader>
                 <CardTitle>
