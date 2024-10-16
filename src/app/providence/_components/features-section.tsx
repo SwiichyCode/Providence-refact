@@ -28,7 +28,7 @@ const features = [
   {
     name: 'Planning de raid adapté à tous',
     description:
-      'Nous raiderons deux fois par semaine (Mercredi & Dimanche de 21h à 00h), un équilibre parfait pour concilier performance et vie IRL, sans pression excessive.',
+      'Nous raiderons trois fois par semaine (Mercredi Dimanche & Lundi de 21h à 00h), un équilibre parfait pour concilier performance et vie IRL, sans pression excessive.',
     icon: PresentationChartLineIcon,
   },
   {
