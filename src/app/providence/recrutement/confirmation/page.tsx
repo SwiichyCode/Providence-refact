@@ -17,7 +17,7 @@ export default function RecrutementConfirmationPage({ searchParams }: Props) {
           salon bienvenue.
         </p>
         <Button>
-          <Link href="https://discord.gg/RG738gWp" target="_blank">
+          <Link href="https://discord.gg/7653pKkfGU" target="_blank">
             Discord
           </Link>
         </Button>

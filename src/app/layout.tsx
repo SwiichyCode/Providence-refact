@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     'Providence, guilde PvE HL sur World of Warcraft, recrute des joueurs pour raids héroïques et mythiques. Rejoignez-nous pour des raids M+ et une progression ambitieuse !',
   icons: [{ rel: 'icon', url: '/favicon.ico' }],
-  authors: [{ name: 'Providence', url: 'https://discord.gg/RG738gWp' }],
+  authors: [{ name: 'Providence', url: 'https://discord.gg/7653pKkfGU' }],
 };
 
 const oswald = Oswald({ subsets: ['latin'], variable: '--font-oswald' });

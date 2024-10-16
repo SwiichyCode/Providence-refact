@@ -3,8 +3,8 @@ import { DiscordLogoIcon } from '@radix-ui/react-icons';
 const navigation = {
   social: [
     {
-      name: 'YouTube',
-      href: 'https://discord.gg/RG738gWp',
+      name: 'Discord',
+      href: 'https://discord.gg/7653pKkfGU',
       icon: <DiscordLogoIcon className="h-6 w-6 text-[#0581B2]" />,
     },
   ],
