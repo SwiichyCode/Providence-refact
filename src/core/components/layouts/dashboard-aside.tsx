@@ -1,7 +1,7 @@
 import { ActiveLink } from '@/core/components/active-link';
 import { dashboardNavigation } from '@/configs/constants/url';
 
-export const Aside = () => {
+export const DashboardAside = () => {
   return (
     <aside className="border-r border-white/10 min-h-[calc(100vh-317px)] fixed">
       <nav>

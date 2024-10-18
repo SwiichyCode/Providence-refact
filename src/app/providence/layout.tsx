@@ -1,5 +1,5 @@
-import { Footer } from '@/app/providence/_components/footer';
-import { Header } from '@/app/providence/_components/header';
+import { Footer } from '@/core/components/layouts/footer';
+import { Header } from '@/core/components/layouts/header';
 import type { PropsWithChildren } from 'react';
 
 export default function DashboardLayout({ children }: PropsWithChildren) {

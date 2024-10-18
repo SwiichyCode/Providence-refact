@@ -1,8 +1,8 @@
 import { db } from '@/configs/server/db';
 import Link from 'next/link';
-import { CloseRecruitmentForm } from '@/app/providence/dashboard/_components/close-recruitment-form';
-import { ArchivedRecruitmentForm } from '@/app/providence/dashboard/_components/archived-recruitment-form';
-import { DeniedRecruitmentForm } from '@/app/providence/dashboard/_components/denied-recruitment-form';
+import { CloseRecruitmentForm } from '@/core/forms/close-recruitment-form';
+import { ArchivedRecruitmentForm } from '@/core/forms/archived-recruitment-form';
+import { DeniedRecruitmentForm } from '@/core/forms/denied-recruitment-form';
 
 type Props = {
   params: {

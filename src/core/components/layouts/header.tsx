@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { URL } from '@/configs/constants/url';
-import { HeaderLogo } from '@/app/providence/_components/header-logo';
-import { HeaderMobile } from '@/app/providence/_components/header-mobile';
-import { HeaderAuthentication } from '@/app/providence/_components/header-authentication';
-import { HeaderHamburger } from '@/app/providence/_components/header-hamburger';
-import { HeaderNavigation } from '@/app/providence/_components/header-navigation';
+import { HeaderLogo } from '@/core/components/layouts/header-logo';
+import { HeaderMobile } from '@/core/components/layouts/header-mobile';
+import { HeaderAuthentication } from '@/core/components/layouts/header-authentication';
+import { HeaderHamburger } from '@/core/components/layouts/header-hamburger';
+import { HeaderNavigation } from '@/core/components/layouts/header-navigation';
 
 export const Header = async () => {
   return (

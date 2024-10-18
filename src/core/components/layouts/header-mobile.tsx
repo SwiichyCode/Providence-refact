@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { URL } from '@/configs/constants/url';
-import { useHeaderMobileStore } from '@/app/providence/_stores/header-mobile-store';
-import { HeaderLogo } from '@/app/providence/_components/header-logo';
+import { useHeaderMobileStore } from '@/core/stores/header-mobile-store';
+import { HeaderLogo } from '@/core/components/layouts/header-logo';
 import { ActiveLink } from '@/core/components/active-link';
 import { navigation } from '@/configs/constants/url';
 

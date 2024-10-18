@@ -1,6 +1,6 @@
 import { BattlenetButton } from '@/core/components/battlenet-button';
 import { getServerAuthSession } from '@/configs/server/auth';
-import { ProfileLink } from '@/app/providence/_components/profile-link';
+import { ProfileLink } from '@/core/components/profile-link';
 
 export const HeaderAuthentication = async () => {
   const session = await getServerAuthSession();

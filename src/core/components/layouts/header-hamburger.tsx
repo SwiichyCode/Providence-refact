@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
-import { useHeaderMobileStore } from '@/app/providence/_stores/header-mobile-store';
+import { useHeaderMobileStore } from '@/core/stores/header-mobile-store';
 
 export const HeaderHamburger = () => {
   const { toggle } = useHeaderMobileStore();
