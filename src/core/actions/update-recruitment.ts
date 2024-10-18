@@ -2,7 +2,7 @@
 
 import { db } from '@/configs/server/db';
 import { adminAction, ServerActionError } from '@/configs/libs/next-safe-action';
-import { revalidatePath } from 'next/cache';
+import { redirect } from 'next/navigation';
 import * as z from 'zod';
 
 const actionSchema = z.object({
@@ -24,5 +24,5 @@ export const updateRecruitmentAction = adminAction.schema(actionSchema).action(a
     throw new ServerActionError('Error');
   }
 
-  revalidatePath(`/providence/dashboard/recrutements/${parsedInput.recruitmentId}`);
+  redirect(`/providence/dashboard/recrutements/${parsedInput.recruitmentStatus.toLowerCase()}`);
 });

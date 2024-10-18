@@ -9,7 +9,7 @@ export default async function RecruitmentsDeniedPage() {
       status: 'DENIED',
     },
     orderBy: {
-      date: 'desc',
+      postedAt: 'desc',
     },
   });
 

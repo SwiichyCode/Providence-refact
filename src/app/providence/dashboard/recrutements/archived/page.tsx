@@ -9,7 +9,7 @@ export default async function RecruitmentsArchivedPage() {
       status: 'ARCHIVED',
     },
     orderBy: {
-      date: 'desc',
+      postedAt: 'desc',
     },
   });
 

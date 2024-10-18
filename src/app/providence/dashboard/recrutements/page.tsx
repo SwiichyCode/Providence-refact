@@ -11,7 +11,7 @@ export default async function RecruitmentsPage() {
       status: 'OPEN',
     },
     orderBy: {
-      date: 'desc',
+      postedAt: 'desc',
     },
   });
 

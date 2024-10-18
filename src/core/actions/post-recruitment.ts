@@ -23,7 +23,6 @@ export const postRecruitmentAction = actionClient.schema(formSchema).action(asyn
         presentation: parsedInput.presentation,
         motivation: parsedInput.motivation,
         days: parsedInput.days,
-        date: new Date(),
       },
     });
   } catch (error) {

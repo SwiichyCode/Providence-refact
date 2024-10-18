@@ -9,7 +9,7 @@ export default async function RecruitmentsClosedPage() {
       status: 'CLOSED',
     },
     orderBy: {
-      date: 'desc',
+      postedAt: 'desc',
     },
   });
 

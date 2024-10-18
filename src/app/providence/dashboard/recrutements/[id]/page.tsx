@@ -28,6 +28,7 @@ export default async function RecruitmentInformationsPage({ params }: Props) {
         <ArchivedRecruitmentForm recruitmentId={recruitment.id} />
         <DeniedRecruitmentForm recruitmentId={recruitment.id} />
         <p>Status: {recruitment.status}</p>
+        <p>Postulé le: {recruitment.postedAt.toISOString()}</p>
       </div>
 
       <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-8">

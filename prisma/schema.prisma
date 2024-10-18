@@ -81,7 +81,7 @@ model Recruitment {
   motivation     String
   days           String[]
   status         RecruitingStatus @default(OPEN)
-  date           DateTime         @default(now())
+  postedAt       DateTime         @default(now())
 }
 
 model RecruitmentPriority {
