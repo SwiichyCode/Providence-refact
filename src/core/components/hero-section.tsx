@@ -7,7 +7,7 @@ export const HeroSection = () => {
     <section className="w-full flex flex-col gap-8 items-center text-center py-20 sm:py-28 mx-auto max-w-7xl px-6 lg:px-8">
       <div className="space-y-2">
         <h1 className="text-4xl font-bold">Providence : Ensemble vers la victoire !</h1>
-        <p className="text-lg">La guilde où performance et convivialité se rencontrent 8/8HM</p>
+        <p className="text-lg">La guilde où performance et convivialité se rencontrent 4/8MM</p>
       </div>
 
       <p className="text-lg">
